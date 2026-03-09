@@ -1,0 +1,7 @@
+{
+  "name": "GUSCHALL Vision Pro",
+  "description": "Advanced inventory and product scanning module for GUSCHALL APPS, featuring AI-powered EAN recognition and professional packshot generation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

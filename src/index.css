@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-electric-purple: #0053a0;
+  --color-gold: #0053a0;
+  --color-deep-black: #000000;
+  --color-dark-graphite: #1a1a1a;
+  --color-pro-blue: #0053a0;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply antialiased transition-colors duration-500;
+  }
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px rgba(0, 83, 160, 0.8), 0 0 20px rgba(0, 83, 160, 0.4);
+}
+
+.logo-impact {
+  filter: drop-shadow(0 0 30px rgba(0, 83, 160, 0.5)) drop-shadow(0 0 60px rgba(0, 83, 160, 0.2));
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+}
+
+.gold-button {
+  @apply bg-pro-blue text-white font-bold py-3 px-6 rounded-xl transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:hover:scale-100 shadow-[0_0_15px_rgba(0,83,160,0.3)];
+}
+
+.purple-accent {
+  @apply text-pro-blue;
+}
+
+.slot-container {
+  @apply relative overflow-hidden rounded-3xl border-2 p-8 transition-all hover:border-pro-blue/30;
+  @apply border-black/5 bg-gradient-to-br from-black/5 to-transparent;
+}
+
+.dark .slot-container {
+  @apply border-white/5 from-white/5 to-transparent;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
